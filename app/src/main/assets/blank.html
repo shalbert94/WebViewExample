@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+body {background-color: #ffffffff;}
+.content {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+</head>
+<body>
+<div class="content">
+    <form id="myForm" action="/action_page.php">
+        <label>
+            <input type="text" placeholder="First name" name="fname" style="width:100%" style="padding:5px 0" style="text-indent:5px">
+        </label>
+        <label>
+            <input type="text" placeholder="Last name" name="lname" style="width:100%" style="padding:5px 0" style="text-indent:5px">
+        </label>
+    </form>
+    <div>
+        <textarea name="comment" form="myForm" placeholder="Enter text..."></textarea>
+    </div>
+    <input type="button" value="Submit" onClick="postNotification()" style="font-size:5vw"/>
+</div>
+<script type="text/javascript">
+        function postNotification() {
+            var x = document.getElementById("myForm").elements[0].value;
+            var y = document.getElementById("myForm").elements[1].value;
+            var z = document.getElementById("myForm").elements[2].value;
+            Android.showNotification(x, y, z);
+        }
+</script>
+</body>
+</html>

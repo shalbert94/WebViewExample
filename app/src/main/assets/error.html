@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+body {background-color: #ffffffff;}
+.content {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+</head>
+<body>
+<div class="content">
+    <form id="myForm" action="/action_page.php">
+        First name: <input type="text" name="fname"><br>
+        Last name: <input type="text" name="lname"><br>
+    </form>
+    <div>
+        <textarea name="comment" form="myForm">Enter text here...</textarea>
+    </div>
+    <input type="button" value="Submit" onClick="postNotification()"/>
+    <div>
+        <p>Error!</p>
+    </div>
+</div>
+<script type="text/javascript">
+        function postNotification() {
+            var x = document.getElementById("myForm").elements[0].value;
+            var y = document.getElementById("myForm").elements[1].value;
+            var z = document.getElementById("myForm").elements[2].value;
+            Android.showNotification(x, y, z);
+        }
+</script>
+</body>
+</html>
