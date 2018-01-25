@@ -1,4 +1,4 @@
-package com.example.android.myapplication;
+package com.example.android.webviewexample;
 
 import org.junit.Test;
 

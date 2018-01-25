@@ -1,4 +1,4 @@
-package com.example.android.myapplication;
+package com.example.android.webviewexample;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
